@@ -179,6 +179,7 @@ textLabel.Font = Enum.Font.SourceSans
 textLabel.Parent = largeGui
 
 local commands = {
+    "tweenobject/tweoj⭐",
     "olddex/odex",
     "itemname",
     "hydoxi/hyd⭐",
@@ -239,6 +240,8 @@ textBox.FocusLost:Connect(function(enterPressed)
             if humanoid then
                 humanoid.JumpPower = jumpPowerValue
             end
+        elseif command:lower() == "tweenobject" or command:lower() == "tweoj" then
+         loadstring(game:HttpGet('https://pastefy.app/XJPDfS0l/raw'))()
         elseif command:lower() == "olddex" or command:lower() == "odex" then
         loadstring(game:HttpGet('https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt'))()
         elseif command:lower() == "hydoxi" or command:lower() == "hyd" then
