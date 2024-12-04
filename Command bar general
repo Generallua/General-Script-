@@ -179,13 +179,14 @@ textLabel.Font = Enum.Font.SourceSans
 textLabel.Parent = largeGui
 
 local commands = {
+    "hydoxi/hyd⭐",
     "resetcalacter",
     "bootfps",
-    "cframeui/cfui",
+    "cframeui/cfui⭐",
     "speed",
     "jumppower",
-    "partdata",
-    "remotspy/rspy",
+    "partdata⭐",
+    "remotspy/rspy⭐",
     "discord"
 }
 
@@ -234,6 +235,8 @@ textBox.FocusLost:Connect(function(enterPressed)
             if humanoid then
                 humanoid.JumpPower = jumpPowerValue
             end
+        elseif command:lower() == "hydoxi" or command:lower() == "hyd" then
+        loadstring(game:HttpGet('https://pastebin.com/raw/Dx4GGXxX'))()
         elseif command:lower() == "partdata" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Generallua/General-Script-/refs/heads/main/Partdata%20script"))()
         elseif command:lower() == "rspy" or command:lower() == "remotspy" then
