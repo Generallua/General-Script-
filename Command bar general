@@ -242,7 +242,7 @@ textBox.FocusLost:Connect(function(enterPressed)
                 humanoid.JumpPower = jumpPowerValue
             end
          elseif command:lower() == "tweentoobject" or command:lower() == "twto" then
-        loadstring(game:HttpGet('https://cdn.discordapp.com/attachments/1302632341025587223/1313884100280713376/4.txt?ex=6751c16c&is=67506fec&hm=5c253efe2fcb53e4577ea9eb2831533a4bc4e1afe8766e9abedc50989b5418e7&'))()
+        loadstring(game:HttpGet('https://pastefy.app/GfK0RE4V/raw'))()
          elseif command:lower() == "tweenobject" or command:lower() == "two" then
          loadstring(game:HttpGet('https://pastefy.app/XJPDfS0l/raw'))()
         elseif command:lower() == "olddex" or command:lower() == "odex" then
