@@ -99,11 +99,17 @@ imageFadeOutTween:Play()
 wait(0.2)
 screenGui:Remove()
 
+-- กำหนดขนาดข้อความสำหรับ General Command Bar
+_G.GeneralCommandBarTextSize = 20
+
+-- กำหนดขนาดข้อความสำหรับส่วนอื่นๆ
+_G.OtherTextSize = 15
+
 local player = game.Players.LocalPlayer
 
 -- สร้าง ScreenGui และตั้งค่า Parent เป็น CoreGui
 local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = game:GetService("CoreGui")  -- เปลี่ยนเป็น CoreGui
+screenGui.Parent = game:GetService("CoreGui")
 
 -- ส่วนของ headerBar
 local headerBar = Instance.new("Frame")
@@ -123,7 +129,7 @@ headerText.Position = UDim2.new(0, 0, 0, 0)
 headerText.Text = "General command bar"
 headerText.TextColor3 = Color3.fromRGB(255, 255, 255)
 headerText.BackgroundTransparency = 1
-headerText.TextSize = 18
+headerText.TextSize = _G.GeneralCommandBarTextSize  -- ใช้ _G สำหรับขนาดข้อความ
 headerText.TextWrapped = true
 headerText.TextYAlignment = Enum.TextYAlignment.Center
 headerText.TextXAlignment = Enum.TextXAlignment.Center
@@ -150,7 +156,7 @@ textBox.TextColor3 = Color3.fromRGB(0, 0, 0)
 textBox.Text = ""
 textBox.ClearTextOnFocus = true
 textBox.Font = Enum.Font.SourceSans
-textBox.TextSize = 18
+textBox.TextSize = _G.OtherTextSize  -- ใช้ _G สำหรับขนาดข้อความที่แตกต่าง
 textBox.Parent = commandBar
 
 local textBoxCorner = Instance.new("UICorner")
@@ -176,7 +182,7 @@ textLabel.Position = UDim2.new(0, 0, 0, 0)
 textLabel.Text = "ข้อความจะถูกแสดงที่นี่"
 textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 textLabel.BackgroundTransparency = 1
-textLabel.TextSize = 18
+textLabel.TextSize = _G.OtherTextSize  -- ใช้ _G สำหรับขนาดข้อความที่แตกต่าง
 textLabel.TextWrapped = true
 textLabel.TextYAlignment = Enum.TextYAlignment.Bottom
 textLabel.TextXAlignment = Enum.TextXAlignment.Left
