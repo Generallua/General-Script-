@@ -101,7 +101,6 @@ screenGui:Remove()
 
 local player = game.Players.LocalPlayer
 local screenGui = Instance.new("ScreenGui")
-screenGui.ZIndex = 10 
 screenGui.Parent = player.PlayerGui
 
 local headerBar = Instance.new("Frame")
@@ -109,7 +108,6 @@ headerBar.Size = UDim2.new(0.2, 0, 0.05, 0)
 headerBar.Position = UDim2.new(0.8, 0, 0.9, 0)
 headerBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 headerBar.BackgroundTransparency = 0.2
-headerBar.ZIndex = 11
 headerBar.Parent = screenGui
 
 local headerCorner = Instance.new("UICorner")
@@ -134,7 +132,6 @@ commandBar.Size = UDim2.new(0.2, 0, 0.05, 0)
 commandBar.Position = UDim2.new(0.8, 0, 0.95, 0)
 commandBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 commandBar.BackgroundTransparency = 0.2
-commandBar.ZIndex = 11
 commandBar.Parent = screenGui
 
 local corner = Instance.new("UICorner")
@@ -161,7 +158,6 @@ largeGui.Size = UDim2.new(0.1, 0, 0.5, 0)
 largeGui.Position = UDim2.new(0, 0, 0.5, 0)
 largeGui.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 largeGui.BackgroundTransparency = 0.2
-largeGui.ZIndex = 12
 largeGui.Visible = false
 largeGui.Parent = screenGui
 
