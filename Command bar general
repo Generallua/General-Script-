@@ -108,7 +108,7 @@ headerBar.Size = UDim2.new(0.2, 0, 0.05, 0)
 headerBar.Position = UDim2.new(0.8, 0, 0.9, 0)
 headerBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 headerBar.BackgroundTransparency = 0.2
-headerBar.Parent = screenGui
+headerBar.Parent = CoreGui
 
 local headerCorner = Instance.new("UICorner")
 headerCorner.CornerRadius = UDim.new(0, 5)
