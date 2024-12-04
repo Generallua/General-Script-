@@ -101,7 +101,7 @@ screenGui:Remove()
 
 local player = game.Players.LocalPlayer
 local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = player.PlayerGui
+screenGui.Parent = player.CoreGui
 
 local headerBar = Instance.new("Frame")
 headerBar.Size = UDim2.new(0.2, 0, 0.05, 0)
