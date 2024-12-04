@@ -1,0 +1,83 @@
+local ScreenGui = Instance.new("ScreenGui")
+local CopyButton = Instance.new("TextButton")
+local CloseButton = Instance.new("TextButton")
+local UICornerCopy = Instance.new("UICorner")
+local UICornerClose = Instance.new("UICorner")
+local UIS = game:GetService("UserInputService")
+local selectedObject = nil
+local selectionBox = Instance.new("SelectionBox")
+local scriptActive = true
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- ปุ่ม Copy
+CopyButton.Parent = CoreGui
+CopyButton.Size = UDim2.new(0, 150, 0, 50)
+CopyButton.Position = UDim2.new(0.5, -75, 0.7, 0)
+CopyButton.Text = "Copy Object Info"
+CopyButton.BackgroundColor3 = Color3.fromRGB(49, 53, 61)
+CopyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyButton.BorderSizePixel = 1
+CopyButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+CopyButton.Font = Enum.Font.SourceSans
+CopyButton.TextSize = 18
+CopyButton.Visible = false
+
+-- มุมมนสำหรับปุ่ม Copy
+UICornerCopy.Parent = CopyButton
+UICornerCopy.CornerRadius = UDim.new(0, 10) -- ปรับค่าให้เหมาะสม (10 คือความโค้ง)
+
+-- ปุ่ม Close
+CloseButton.Parent = ScreenGui
+CloseButton.Size = UDim2.new(0, 30, 0, 30)
+CloseButton.Position = UDim2.new(1, -40, 0, 10)
+CloseButton.Text = "X"
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 71, 71)
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.BorderSizePixel = 1
+CloseButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+CloseButton.Font = Enum.Font.SourceSans
+CloseButton.TextSize = 20
+CloseButton.AutoButtonColor = true
+
+-- มุมมนสำหรับปุ่ม Close
+UICornerClose.Parent = CloseButton
+UICornerClose.CornerRadius = UDim.new(0, 15) -- โค้งกว่าปุ่ม Copy
+
+local player = game.Players.LocalPlayer
+player:GetMouse().Button1Down:Connect(function()
+    if not scriptActive then return end
+    local target = player:GetMouse().Target
+    if target then
+        if selectedObject then
+            selectionBox.Parent = nil
+        end
+        selectedObject = target
+        selectionBox.Parent = selectedObject
+        selectionBox.Adornee = selectedObject
+        selectionBox.Color3 = Color3.fromRGB(255, 255, 0)
+        selectionBox.LineThickness = 0.05
+        CopyButton.Visible = true
+    end
+end)
+
+CopyButton.MouseButton1Click:Connect(function()
+    if selectedObject then
+        local objectInfo = "Name: " .. selectedObject.Name .. "\n" ..
+                           "Class: " .. selectedObject.ClassName .. "\n" ..
+                           "Parent: " .. (selectedObject.Parent and selectedObject.Parent:GetFullName() or "None") .. "\n" ..
+                           "Position: " .. (selectedObject:IsA("BasePart") and tostring(selectedObject.Position) or "N/A") .. "\n" ..
+                           "Color: " .. (selectedObject:IsA("BasePart") and tostring(selectedObject.Color) or "N/A")
+        setclipboard(objectInfo)
+    end
+end)
+
+CloseButton.MouseButton1Click:Connect(function()
+    scriptActive = false
+    CopyButton.Visible = false
+    if selectedObject then
+        selectionBox.Parent = nil
+        selectedObject = nil
+    end
+    ScreenGui:Destroy()
+end)
