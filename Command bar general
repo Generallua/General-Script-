@@ -101,14 +101,14 @@ screenGui:Remove()
 
 local player = game.Players.LocalPlayer
 local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = player.CoreGui
+screenGui.Parent = player:WaitForChild("PlayerGui") -- เปลี่ยนเป็น PlayerGui
 
 local headerBar = Instance.new("Frame")
 headerBar.Size = UDim2.new(0.2, 0, 0.05, 0)
 headerBar.Position = UDim2.new(0.8, 0, 0.9, 0)
 headerBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 headerBar.BackgroundTransparency = 0.2
-headerBar.Parent = CoreGui
+headerBar.Parent = screenGui -- ตั้ง parent ให้เป็น screenGui แทน CoreGui
 
 local headerCorner = Instance.new("UICorner")
 headerCorner.CornerRadius = UDim.new(0, 5)
@@ -132,7 +132,7 @@ commandBar.Size = UDim2.new(0.2, 0, 0.05, 0)
 commandBar.Position = UDim2.new(0.8, 0, 0.95, 0)
 commandBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 commandBar.BackgroundTransparency = 0.2
-commandBar.Parent = screenGui
+commandBar.Parent = screenGui -- ตั้ง parent ให้เป็น screenGui แทน CoreGui
 
 local corner = Instance.new("UICorner")
 corner.CornerRadius = UDim.new(0, 5)
@@ -222,7 +222,7 @@ textBox.FocusLost:Connect(function(enterPressed)
         if command:lower() == "resetcalacter" then
             loadstring(game:HttpGet("https://pastebin.com/raw/ELZ7nzJZ"))()
         elseif command:lower() == "itemname" then
-       loadstring(game:HttpGet('https://pastebin.com/raw/MfMnEZFH'))()
+            loadstring(game:HttpGet('https://pastebin.com/raw/MfMnEZFH'))()
         elseif command:lower() == "bootfps" then
             loadstring(game:HttpGet("https://pastebin.com/raw/GKWVahw5"))()
         elseif command:lower() == "cframeui" or command:lower() == "cfui" then
@@ -241,14 +241,14 @@ textBox.FocusLost:Connect(function(enterPressed)
             if humanoid then
                 humanoid.JumpPower = jumpPowerValue
             end
-         elseif command:lower() == "tweentoobject" or command:lower() == "twto" then
-        loadstring(game:HttpGet('https://pastefy.app/GfK0RE4V/raw'))()
-         elseif command:lower() == "tweenobject" or command:lower() == "two" then
-         loadstring(game:HttpGet('https://pastefy.app/XJPDfS0l/raw'))()
+        elseif command:lower() == "tweentoobject" or command:lower() == "twto" then
+            loadstring(game:HttpGet('https://pastefy.app/GfK0RE4V/raw'))()
+        elseif command:lower() == "tweenobject" or command:lower() == "two" then
+            loadstring(game:HttpGet('https://pastefy.app/XJPDfS0l/raw'))()
         elseif command:lower() == "olddex" or command:lower() == "odex" then
-        loadstring(game:HttpGet('https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt'))()
+            loadstring(game:HttpGet('https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt'))()
         elseif command:lower() == "hydoxi" or command:lower() == "hyd" then
-        loadstring(game:HttpGet('https://pastebin.com/raw/Dx4GGXxX'))()
+            loadstring(game:HttpGet('https://pastebin.com/raw/Dx4GGXxX'))()
         elseif command:lower() == "partdata" then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Generallua/General-Script-/refs/heads/main/Partdata%20script"))()
         elseif command:lower() == "rspy" or command:lower() == "remotspy" then
