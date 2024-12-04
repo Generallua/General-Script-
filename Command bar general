@@ -135,7 +135,7 @@ local commandBar = Instance.new("Frame")
 commandBar.Size = UDim2.new(0.2, 0, 0.05, 0)
 commandBar.Position = UDim2.new(0.8, 0, 0.95, 0)
 commandBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-commandBar.BackgroundTransparency = 0.2
+commandBar.BackgroundTransparency = 0
 commandBar.Parent = screenGui
 
 local corner = Instance.new("UICorner")
