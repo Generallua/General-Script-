@@ -110,7 +110,7 @@ local headerBar = Instance.new("Frame")
 headerBar.Size = UDim2.new(0.2, 0, 0.05, 0)
 headerBar.Position = UDim2.new(0.8, 0, 0.9, 0)
 headerBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-headerBar.BackgroundTransparency = 0.2
+headerBar.BackgroundTransparency = 0
 headerBar.Parent = screenGui
 
 local headerCorner = Instance.new("UICorner")
@@ -162,7 +162,7 @@ local largeGui = Instance.new("Frame")
 largeGui.Size = UDim2.new(0.1, 0, 0.5, 0)
 largeGui.Position = UDim2.new(0, 0, 0.5, 0)
 largeGui.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-largeGui.BackgroundTransparency = 0.2
+largeGui.BackgroundTransparency = 0
 largeGui.Visible = false
 largeGui.Parent = screenGui
 
