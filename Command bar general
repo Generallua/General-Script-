@@ -179,6 +179,7 @@ textLabel.Font = Enum.Font.SourceSans
 textLabel.Parent = largeGui
 
 local commands = {
+    "itemname",
     "hydoxi/hyd⭐",
     "resetcalacter",
     "bootfps",
@@ -217,6 +218,8 @@ textBox.FocusLost:Connect(function(enterPressed)
         textLabel.Text = command
         if command:lower() == "resetcalacter" then
             loadstring(game:HttpGet("https://pastebin.com/raw/ELZ7nzJZ"))()
+        elseif command:lower() == "itemname" then
+       loadstring(game:HttpGet('https://pastebin.com/raw/MfMnEZFH'))()
         elseif command:lower() == "bootfps" then
             loadstring(game:HttpGet("https://pastebin.com/raw/GKWVahw5"))()
         elseif command:lower() == "cframeui" or command:lower() == "cfui" then
