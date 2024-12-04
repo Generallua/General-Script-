@@ -11,10 +11,10 @@ local scriptActive = true
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 -- ปุ่ม Copy
-CopyButton.Parent = CoreGui
+CopyButton.Parent = ScreenGui
 CopyButton.Size = UDim2.new(0, 150, 0, 50)
 CopyButton.Position = UDim2.new(0.5, -75, 0.7, 0)
-CopyButton.Text = "Copy Object Info"
+CopyButton.Text = "Copy data Object"
 CopyButton.BackgroundColor3 = Color3.fromRGB(49, 53, 61)
 CopyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CopyButton.BorderSizePixel = 1
