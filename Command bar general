@@ -191,6 +191,7 @@ textLabel.Parent = largeGui
 
 -- รายการคำสั่ง
 local commands = {
+    "infinitejump",
     "tweentoobject/twto⭐",
     "tweenobject/two⭐",
     "olddex/odex",
@@ -238,6 +239,13 @@ textBox.FocusLost:Connect(function(enterPressed)
             loadstring(game:HttpGet("https://pastebin.com/raw/ELZ7nzJZ"))()
         elseif command:lower() == "itemname" then
             loadstring(game:HttpGet('https://pastebin.com/raw/MfMnEZFH'))()
+         elseif command:lower() == "infinitejump" then
+        local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping")
+            end
+        end)
         elseif command:lower() == "bootfps" then
             loadstring(game:HttpGet("https://pastebin.com/raw/GKWVahw5"))()
         elseif command:lower() == "cframeui" or command:lower() == "cfui" then
