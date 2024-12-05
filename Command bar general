@@ -53,7 +53,7 @@ textBox.Size = UDim2.new(0.8, 0, 1, 0)
 textBox.Position = UDim2.new(0, 0, 0, 0)
 textBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 textBox.TextColor3 = Color3.fromRGB(0, 0, 0)
-textBox.Text = ""
+textBox.Text = " "
 textBox.ClearTextOnFocus = true
 textBox.Font = Enum.Font.SourceSans
 textBox.TextSize = _G.OtherTextSize  -- ใช้ _G สำหรับขนาดข้อความที่แตกต่าง
@@ -92,18 +92,18 @@ textLabel.Parent = largeGui
 -- รายการคำสั่ง
 local commands = {
     "infinitejump",
-    "tweentoobject/twto⭐",
-    "tweenobject/two⭐",
-    "olddex/odex",
+    "tweentoobject / twto⭐",
+    "tweenobject / two⭐",
+    "olddex / odex",
     "itemname",
-    "hydoxi/hyd⭐",
+    "hydoxi / hyd⭐",
     "resetcalacter",
     "bootfps",
-    "cframeui/cfui⭐",
+    "cframegui / cfui⭐",
     "speed",
     "jumppower",
     "partdata⭐",
-    "remotspy/rspy⭐",
+    "remotspy / rspy⭐",
     "discord"
 }
 
@@ -146,9 +146,9 @@ textBox.FocusLost:Connect(function(enterPressed)
                 game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping")
             end
         end)
-        elseif command:lower() == "bootfps" then
+        elseif command:lower() == "bootsfps" then
             loadstring(game:HttpGet("https://pastebin.com/raw/GKWVahw5"))()
-        elseif command:lower() == "cframeui" or command:lower() == "cfui" then
+        elseif command:lower() == "cframegui" or command:lower() == "cfui" then
             loadstring(game:HttpGet("https://pastefy.app/am1kOhf3/raw"))()
         elseif command:sub(1, 5):lower() == "speed" then
             local speedValue = tonumber(command:sub(7)) or 16
