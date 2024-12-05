@@ -1,17 +1,14 @@
 loadstring(game:HttpGet('https://raw.githubusercontent.com/FingHUB/GeneralHub/refs/heads/main/Intro%20General'))()
--- กำหนดขนาดข้อความสำหรับ General Command Bar
+
 _G.GeneralCommandBarTextSize = 20
 
--- กำหนดขนาดข้อความสำหรับส่วนอื่นๆ
 _G.OtherTextSize = 15
 
 local player = game.Players.LocalPlayer
 
--- สร้าง ScreenGui และตั้งค่า Parent เป็น CoreGui
 local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = game:GetService("CoreGui")
 
--- ส่วนของ headerBar
 local headerBar = Instance.new("Frame")
 headerBar.Size = UDim2.new(0.2, 0, 0.05, 0)
 headerBar.Position = UDim2.new(0.8, 0, 0.9, 0)
@@ -29,14 +26,13 @@ headerText.Position = UDim2.new(0, 0, 0, 0)
 headerText.Text = "General command bar"
 headerText.TextColor3 = Color3.fromRGB(255, 255, 255)
 headerText.BackgroundTransparency = 1
-headerText.TextSize = _G.GeneralCommandBarTextSize  -- ใช้ _G สำหรับขนาดข้อความ
+headerText.TextSize = _G.GeneralCommandBarTextSize
 headerText.TextWrapped = true
 headerText.TextYAlignment = Enum.TextYAlignment.Center
 headerText.TextXAlignment = Enum.TextXAlignment.Center
 headerText.Font = Enum.Font.SourceSans
 headerText.Parent = headerBar
 
--- ส่วนของ commandBar
 local commandBar = Instance.new("Frame")
 commandBar.Size = UDim2.new(0.2, 0, 0.05, 0)
 commandBar.Position = UDim2.new(0.8, 0, 0.95, 0)
@@ -53,17 +49,16 @@ textBox.Size = UDim2.new(0.8, 0, 1, 0)
 textBox.Position = UDim2.new(0, 0, 0, 0)
 textBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 textBox.TextColor3 = Color3.fromRGB(0, 0, 0)
-textBox.Text = " "
+textBox.Text = ""
 textBox.ClearTextOnFocus = true
 textBox.Font = Enum.Font.SourceSans
-textBox.TextSize = _G.OtherTextSize  -- ใช้ _G สำหรับขนาดข้อความที่แตกต่าง
+textBox.TextSize = _G.OtherTextSize
 textBox.Parent = commandBar
 
 local textBoxCorner = Instance.new("UICorner")
 textBoxCorner.CornerRadius = UDim.new(0, 5)
 textBoxCorner.Parent = textBox
 
--- ส่วนของ largeGui
 local largeGui = Instance.new("Frame")
 largeGui.Size = UDim2.new(0.1, 0, 0.5, 0)
 largeGui.Position = UDim2.new(0, 0, 0.5, 0)
@@ -82,7 +77,7 @@ textLabel.Position = UDim2.new(0, 0, 0, 0)
 textLabel.Text = "ข้อความจะถูกแสดงที่นี่"
 textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 textLabel.BackgroundTransparency = 1
-textLabel.TextSize = _G.OtherTextSize  -- ใช้ _G สำหรับขนาดข้อความที่แตกต่าง
+textLabel.TextSize = _G.OtherTextSize
 textLabel.TextWrapped = true
 textLabel.TextYAlignment = Enum.TextYAlignment.Bottom
 textLabel.TextXAlignment = Enum.TextXAlignment.Left
