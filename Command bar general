@@ -1,4 +1,4 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/FingHUB/GeneralHub/refs/heads/main/Intro%20General'))()
+loadstring(game:HttpGet('https://cdn.discordapp.com/attachments/1291364516654874634/1314471085772771350/intro.txt?ex=6753e418&is=67529298&hm=6d87e2bd198a2568fe74c4f02cbf811d24ab3197027bff7919a5e6675544dbe7&'))()
 
 _G.GeneralCommandBarTextSize = 20
 
