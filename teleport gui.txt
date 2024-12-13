@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Generallua/Script-/refs/heads/main/Teleport%20GUI"))()
